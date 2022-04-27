@@ -1,0 +1,24 @@
+description: API error
+properties:
+  message:
+    description: A descriptive error message
+    type: string
+    example: |-
+      Validation error: the value provided for `my_input` is a number but
+      should be a string.
+  expected_object_response:
+    description: |-
+      What the endpoint would have returned if the request was successful.
+    type: string
+    example: my_object
+  raw:
+    description: A raw JSON string of the error.
+    type: string
+    example: |-
+      {"stack":"Error: Validation error: `my_input` is a number but should be a string.\\n    at REPL2:1:11\\n    at Script.runInThisContext (node:vm:129:12)\\n    at REPLServer.defaultEval (node:repl:562:29)\\n    at bound (node:domain:421:15)\\n    at REPLServer.runBound [as eval] (node:domain:432:12)\\n    at REPLServer.onLine (node:repl:889:10)\\n    at REPLServer.emit (node:events:402:35)\\n    at REPLServer.emit (node:domain:475:12)\\n    at REPLServer.Interface._onLine (node:readline:487:10)\\n    at REPLServer.Interface._line (node:readline:864:8)","message":"Validation error: `my_input` is a number but should be a string."}
+required:
+  - message
+  - expected_object_response
+  - raw
+title: Error
+type: object
