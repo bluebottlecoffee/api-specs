@@ -35,6 +35,8 @@ properties:
   data:
     description: Wrapped request/response data
     type: object
+discriminator:
+  propertyName: data_type
 required:
   - id
   - source
