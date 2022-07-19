@@ -32,9 +32,6 @@ properties:
   data_type:
     description: Type of the data that is wrapped.
     type: string
-  data:
-    description: Wrapped request/response data
-    type: object
 discriminator:
   propertyName: data_type
 required:
@@ -42,6 +39,5 @@ required:
   - source
   - time
   - data_type
-  - data
 title: Envelope
 type: object
